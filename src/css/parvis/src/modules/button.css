@@ -1,0 +1,77 @@
+
+/*
+	Button Base layout
+*/
+
+button, [class^="btn"] {
+	all: unset;
+	color: var(--color-base-elements-foreground);
+	background-color: var(--color-base-elements-background);
+	border-radius: 0.2em;
+	padding: 0.4em;
+	font-size: 1.3em;
+	text-align: center;
+	cursor: pointer;
+	overflow: hidden;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+}
+
+button:hover, [class^="btn"]:hover {
+	filter: brightness(110%);
+}
+/*
+	Button Round layout
+*/
+
+.btn--round {
+	border-radius: 50%;
+	font-size: 20px;
+	width: 40px;
+	height: 40px;
+	padding: 0;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+}
+
+
+/*
+	Button Flat layout
+*/
+
+.btn--flat {
+	all: unset;
+	border-radius: 0.2em;
+	padding: 0.4em;
+	font-size: 1.3em;
+	text-align: center;
+	color: var(--color-base-foreground);
+	background-color: var(--color-base-background);
+	cursor: pointer;
+	overflow: hidden;
+	transform: translate3d(0, 0, 0);
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+}
+
+.btn--flat:hover {
+	filter: unset;
+	box-shadow: unset;
+}
+
+.btn--flat:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	background-image: radial-gradient(circle, var(--color-base-elements-background) 10%, transparent 10%);
+	background-repeat: no-repeat;
+	background-position: 50%;
+	transform: scale(10, 10);
+	opacity: 0;
+	transition: transform .5s, opacity 1s;
+}

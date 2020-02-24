@@ -1,0 +1,223 @@
+
+body {
+  margin: 0;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: none;
+}
+
+div {
+  cursor: pointer;
+  font-size: 1.3em;
+}
+
+canvas {
+  position: absolute;
+  width: 512px;
+  height: 512px;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+input[type=range] {
+  margin: 10px 0;
+  -webkit-appearance: none;
+  height: 1.6em;
+  border-radius: 1.3em;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  all: unset;
+  background-color: #000;
+  border-radius: 1.3em;
+  height: 1.6em;
+  width: 2em;
+  margin-top: 3px;
+}
+
+
+input[type*="range"]:focus {
+  outline: none;
+}
+
+
+
+.layermanager {
+  overflow: auto;
+  background-color: var(--color-dark-2-base);
+  position: fixed;
+  height: calc(100% / 12 * 11);
+  width: calc(100% / 12 * 8);
+  z-index: 1;
+}
+
+
+
+.toolbar {
+  position: fixed;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  border-right: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  color: #FFF;
+  z-index: 1;
+}
+
+
+.layerbar {
+  position: fixed;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  border-left: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.layerbar > section {
+  text-align: center;
+  cursor: pointer;
+  padding: 0.4em;
+  font-size: 1.2em;
+  background-color: #d6d6d6;
+  border-bottom: 2px solid black;
+}
+
+.layerbar > section:hover {
+  background-color: #b1b1b1;
+}
+
+
+.layerbar > .selected {
+  background-color: #a9a9a9;
+}
+
+.selectable {
+  -moz-user-select: text;
+  -khtml-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+
+.menuIcons {
+  height: 1.4em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+}
+
+.animationmanager {
+  position: fixed;
+  bottom: 0;
+  height: calc(100% / 12);
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.animationframe {
+  height: 90%;
+  background-color: #3F51B5;
+  border-right: 1px solid #000;
+  float: left;
+}
+
+.addframe {
+  height: 90%;
+  float: left;
+  padding: 0.5em;
+  font-size: 1em;
+  color: #FFF;
+}
+
+.selectedanimationframe {
+  background-color: #2196F3;
+}
+
+
+.player {
+  height: 90%;
+  width: 90%;
+  background-color: var(--color-dark-2-base);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  z-index: 10001;
+  border: 1px solid #000;
+  overflow: auto;
+}
+
+.player > button {
+  margin-left: 0.3em;
+}
+
+.player > a {
+  margin-left: 0.3em;
+}
+
+.player > article {
+  color: #FFF;
+  padding: 1em;
+  margin-left: 1em;
+  height: 30%;
+  overflow: auto;
+  width: 250px;
+}
+
+.player > canvas {
+  margin-left: 150px;
+}
+
+.videobutton {
+  position: absolute;
+  left: 1em;
+  bottom: 1em;
+  z-index: 10000;
+}
+
+.framesettingwindow {
+  height: 90%;
+  width: 90%;
+  background-color: var(--color-dark-2-base);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  z-index: 10001;
+  border: 1px solid #000;
+  overflow: auto;
+}
+
+
+.framesettingwindow > button {
+  margin-left: 0.3em;
+}
+
+
+.framesettingwindow > section {
+  margin-left: 0.3em;
+  margin-top: 1em;
+  padding: 0.3em;
+}
+
+.framesettingwindow > section > input {
+	all: unset;
+	font-size: var(--form-input-fontsize);
+	padding: 0.3em;
+	padding-top: calc(var(--form-input-fontsize) / 1.5);
+	background-color: var(--color-base-elements-background);
+	color: var(--color-base-elements-foreground);
+	border-bottom: 1px solid var(--color-base-elements-foreground);
+  margin-left: 0.3em;
+  border-radius: 0.2em;
+}

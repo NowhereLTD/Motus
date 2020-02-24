@@ -1,0 +1,8 @@
+{
+  "pen": {
+    "lineJoin": "round",
+    "lineWidth": 10,
+    "strokeStyle": "#000000",
+    "method": "this.drawLine"
+  }
+}
